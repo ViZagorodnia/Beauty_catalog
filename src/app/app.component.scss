@@ -1,0 +1,26 @@
+
+.mainMenu {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  margin-bottom: 25px;
+  column-gap: 25px;
+}
+.menuContainer{
+  background-color: white;
+  width: 100%;
+  height: 45px;
+  text-align: left;
+  font-family: 'PopinsLight', serif;
+  font-size: 25px;
+  color: #44385A;
+  text-decoration: none;
+}
+p {
+  margin: 5px;
+}
+
+.iconMenu {
+  color: #44385A;
+  font-size: 25px;
+  padding-right: 15px;
+}

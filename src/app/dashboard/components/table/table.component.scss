@@ -1,0 +1,117 @@
+.container {
+  background-color: #1f1e1c;
+  border: 2px solid #333331;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.elementTable {
+  display: grid;
+  grid-template-areas: "iso b . . c" "iso o f ne mg" "fit . . p s" "fit ca sc . . ";
+  justify-content: start;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+.element {
+  border-top-right-radius: 12px;
+  padding-left: 5px;
+}
+.name {
+  color: #fff;
+}
+.big {
+  height: 155px;
+  width: 155px;
+  .name {
+    margin: 2px;
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+    top: -15px;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+  }
+}
+span {
+  position: relative;
+  top: 5px;
+  left: 84%;
+}
+.small {
+  width: 75px;
+  height: 75px;
+  span {
+    font-size: 12px;
+    top: 3px;
+    left: 80%;
+  }
+  .name {
+    margin: 2px;
+    font-size: 36px;
+    position: relative;
+    top: -12px;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    position: relative;
+    top: -16px;
+  }
+  .elementName{
+    font-weight: bold;
+  }
+}
+.iso {
+  grid-area: iso;
+  background-color: #eb3323;
+}
+.b {
+  grid-area: b;
+  background-color: #2569f6;
+}
+.c {
+  grid-area: c;
+  background-color: #2b21f5;
+}
+.o {
+  grid-area: o;
+  background-color: #2b21f5;
+}
+.f {
+  grid-area: f;
+  background-color: #bd34f6;
+}
+.ne {
+  grid-area: ne;
+  background-color: #ec3697;
+}
+.mg {
+  grid-area: mg;
+  background-color: #f19d39;
+}
+.fit {
+  grid-area: fit;
+  background-color: #f19d39;
+}
+.p {
+  grid-area: p;
+  background-color: #2b21f5;
+}
+.s {
+  grid-area: s;
+  background-color: #2b21f5;
+}
+.ca {
+  grid-area: ca;
+  background-color: #f19d39;
+}
+.sc {
+  grid-area: sc;
+  background-color: #71fa7a;
+}

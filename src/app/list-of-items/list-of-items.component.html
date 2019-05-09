@@ -1,0 +1,46 @@
+<div class="container">
+  <button (click)="makeListView()"><i class="fas fa-bars"></i></button>
+  <button (click)="makeCardView()"><i class="fas fa-th"></i></button>
+  <button (click)="addProductButton()"><i class="fas fa-plus"></i> Add new product</button>
+  <div id="listOfItems" class="cardView">
+    <div *ngFor="let item of listOfProducts" id="itemProduct" class="item borderStyle">
+      <div class="itemIcon" [ngStyle]="{'background-image': 'url(' + item.img + ')'}"></div>
+      <button id="closeView" (click)="productViewCloseButton($event)"><i class="fas fa-times"></i></button>
+      <div class="itemInfo">
+        <p class="itemName">{{item.name}}</p>
+        <p class="itemPrice">{{item.price}}</p>
+      </div>
+      <button class="trashButton" (click)="removeProduct($event)"><i class="fas fa-trash-alt"></i> Remove product</button>
+      <button class="viewButton" (click)="viewProduct($event)"><i class="fas fa-search"></i> </button>
+
+    </div>
+  </div>
+</div>
+  <div id="formAddNewProduct" class="addNewItem borderStyle closed">
+    <div class="closeButton" (click)="closeFormButton()"><i class="fas fa-times"></i></div>
+    <h4>Please select new product</h4>
+    <form [formGroup]="addNewProductForm">
+      <div class="form-row">
+        <label>Choose img: </label>
+        <input type='file' formControlName="image" class="custom-file-input">
+      </div>
+
+      <div class="form-row">
+        <label>Name of product: </label>
+        <input type="text"
+               formControlName="productName">
+      </div>
+
+      <div class="form-row">
+        <label>Price: </label>
+        <input type="text"
+               formControlName="productPrice">
+      </div>
+      <button
+        (click)="addNewProduct()">
+        Add product
+      </button>
+
+    </form>
+</div>
+<div id="overlay" class="overlay"></div>

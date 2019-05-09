@@ -1,0 +1,10 @@
+<div class="mainMenu">
+  <a [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="menuContainer borderStyle">
+    <p class="menuText"><i class = "fas fa-home iconMenu"></i>Dashboard</p>
+  </a>
+  <a [routerLink]="['list-of-items']" routerLinkActive="active-link" class="menuContainer borderStyle">
+    <p class="menuText"><i class = "fas fa-briefcase iconMenu"></i>List of items</p>
+  </a>
+</div>
+
+<router-outlet></router-outlet>
